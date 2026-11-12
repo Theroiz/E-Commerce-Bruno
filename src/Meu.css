@@ -1,0 +1,742 @@
+.logo {
+  width: 300px;
+  height: 300px;
+}
+
+.containerPrincipal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  text-align: left;
+}
+
+.topoEcommerce {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  flex-wrap: wrap;
+}
+
+.identidadeMarca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoCabecalho {
+  width: 44px;
+  height: 44px;
+}
+
+.textosMarca h1 {
+  font-size: 22px;
+  margin: 0;
+  letter-spacing: -0.4px;
+}
+
+.autorHeader {
+  font-size: 13px;
+  margin-top: 2px;
+  color: var(--text);
+}
+
+.menuNavegacao {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.botaoMenu,
+.botaoMenuAtivo {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+  color: var(--text-h);
+  transition: all 0.2s;
+}
+
+.botaoMenu:hover {
+  border-color: var(--accent-border);
+}
+
+.botaoMenuAtivo {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.barraNotificacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+.barraNotificacao.sucesso {
+  background: rgba(34, 197, 94, 0.14);
+  color: #15803d;
+}
+
+.barraNotificacao.erro {
+  background: rgba(239, 68, 68, 0.14);
+  color: #b91c1c;
+}
+
+.barraNotificacao.info {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .barraNotificacao.sucesso {
+    color: #86efac;
+  }
+  .barraNotificacao.erro {
+    color: #fca5a5;
+  }
+}
+
+.fecharNotificacao {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+}
+
+.conteudoPrincipal {
+  flex: 1;
+  padding: 28px;
+}
+
+.secaoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cabecalhoSecao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.subtituloSecao {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.barraFiltros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.campoInput,
+.campoSelect,
+.campoTextarea {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.campoInput:focus,
+.campoSelect:focus,
+.campoTextarea:focus {
+  border-color: var(--accent);
+}
+
+.gradeProdutos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+
+.cartaoProduto {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topoCartaoProduto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.tagCategoria {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.codigoSku {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+}
+
+.tituloProduto {
+  font-size: 17px;
+  margin: 4px 0 0;
+  color: var(--text-h);
+}
+
+.descricaoProduto {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text);
+  flex: 1;
+}
+
+.blocoPrecoEstoque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.precoProduto {
+  font-size: 20px;
+  color: var(--text-h);
+}
+
+.badgeEstoque {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.statusOk {
+  background: rgba(34, 197, 94, 0.14);
+  color: #15803d;
+}
+
+.statusBaixo {
+  background: rgba(245, 158, 11, 0.16);
+  color: #b45309;
+}
+
+.statusEsgotado {
+  background: rgba(239, 68, 68, 0.15);
+  color: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .statusOk {
+    color: #86efac;
+  }
+  .statusBaixo {
+    color: #fcd34d;
+  }
+  .statusEsgotado {
+    color: #fca5a5;
+  }
+}
+
+.infoNoCarrinho {
+  font-size: 12.5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+
+.acoesCartaoProduto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.botaoPrimario {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.botaoPrimario:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.botaoPrimario:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.botaoSecundario,
+.botaoSecundarioPequeno {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.botaoSecundarioPequeno {
+  padding: 5px 9px;
+  font-size: 12px;
+}
+
+.botaoPerigoPequeno {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  cursor: pointer;
+}
+
+.botaoLink {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px;
+}
+
+.larguraTotal {
+  width: 100%;
+}
+
+.gradeResumoEstoque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.cartaoIndicador {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: var(--social-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rotuloIndicador {
+  font-size: 12.5px;
+  color: var(--text);
+}
+
+.valorIndicador {
+  font-size: 20px;
+  color: var(--text-h);
+}
+
+.destaqueAlerta {
+  color: var(--accent);
+}
+
+.layoutDuasColunas {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layoutDuasColunas {
+    grid-template-columns: 1fr;
+  }
+}
+
+.painelFormulario,
+.painelTabelaEstoque,
+.painelResumoPedido {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.painelFormulario h3,
+.painelTabelaEstoque h3,
+.painelResumoPedido h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.grupoCampo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.grupoCampo label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.linhaCamposDuplos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.topoTabelaEstoque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.botoesFiltroRapido {
+  display: flex;
+  gap: 6px;
+}
+
+.botaoFiltro,
+.botaoFiltroAtivo {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.botaoFiltroAtivo {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tabelaResponsiva {
+  overflow-x: auto;
+}
+
+.tabelaEstoque {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.tabelaEstoque th,
+.tabelaEstoque td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tabelaEstoque th {
+  font-weight: 600;
+  color: var(--text-h);
+  background: var(--social-bg);
+}
+
+.celulaProdutoNome {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.textoMenor {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.controlePrecoInline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inputNumeroCurto,
+.inputQtdDireta {
+  width: 74px;
+  padding: 5px 6px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 13px;
+}
+
+.inputQtdDireta {
+  width: 52px;
+  text-align: center;
+}
+
+.controlesQuantidade {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.botaoQtd {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botaoQtd:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.displayQuantidade {
+  min-width: 26px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.listaItensCarrinho {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemCarrinhoCard {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.infoItemCarrinho h4 {
+  margin: 4px 0;
+  color: var(--text-h);
+}
+
+.precoUnitarioItem {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.acoesItemCarrinho {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subtotalItem {
+  font-size: 16px;
+  color: var(--text-h);
+  min-width: 95px;
+  text-align: right;
+}
+
+.linhasTotais {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linhaResumo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.textoDesconto {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.linhaTotalFinal {
+  font-size: 18px;
+  color: var(--text-h);
+  border-top: 1px dashed var(--border);
+  padding-top: 8px;
+}
+
+.infoCompradorLogado {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.avisoLoginNecessario {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--code-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.abasInternasAuth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.abaAuth,
+.abaAuthAtiva {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.abaAuthAtiva {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.listaContasDemo,
+.listaPedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemContaDemo,
+.cartaoPedido {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cartaoPedido {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.listaItensPedido {
+  margin: 6px 0;
+  padding-left: 18px;
+  font-size: 13.5px;
+}
+
+.rodapePedido {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.cartaoPerfilUsuario {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--social-bg);
+}
+
+.avatarInicial {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.caixaVazia {
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 36px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.rodapeEcommerce {
+  border-top: 1px solid var(--border);
+  padding: 16px 28px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.painelAuthCentralizado {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
